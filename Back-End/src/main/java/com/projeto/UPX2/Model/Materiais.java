@@ -14,10 +14,13 @@ public class Materiais {
     private Long id;
     private String objeto;
     private String material; //
-    private boolean ehreciclavel;
+    private String ehreciclavel;
     private String formaReciclagem;
 
-    public Materiais(String objeto, String material, boolean ehreciclavel, String formaReciclagem) {
+    public Materiais() {
+    }
+
+    public Materiais(String objeto, String material, String ehreciclavel, String formaReciclagem) {
         this.objeto = objeto;
         this.material = material;
         this.ehreciclavel = ehreciclavel;
@@ -40,11 +43,11 @@ public class Materiais {
         this.material = material;
     }
 
-    public boolean isEhreciclavel() {
+    public String getEhreciclavel() {
         return ehreciclavel;
     }
 
-    public void setEhreciclavel(boolean ehreciclavel) {
+    public void setEhreciclavel(String ehreciclavel) {
         this.ehreciclavel = ehreciclavel;
     }
 
