@@ -16,31 +16,10 @@ import java.io.IOException;
 @RestController
 public class PessoaControler {
 
-    @Autowired
-    private MateriaisService materiaisService;
-
-    @GetMapping("/cliente")
+     @GetMapping("/cliente")
     public String ClienteTest(){
         return "Test";
     }
 
-    //Utilizado uma unica vez para gravar o arquivo json de materias no Banco de Dados
-    @PostMapping("/gravar-materiais")
-    public ResponseEntity<String> carregarMateriais(@RequestParam("file") MultipartFile file) {
-        try {
-            // Salva o arquivo temporariamente para leitura
-            File tempFile = File.createTempFile("materiais", ".json");
-            file.transferTo(tempFile);
 
-            // Chama o método do serviço para ler e salvar os materiais
-            materiaisService.lerEGravarMateriais(tempFile.getAbsolutePath());
-
-            // Deleta o arquivo temporário após o uso
-            tempFile.delete();
-
-            return ResponseEntity.ok("Materiais salvos com sucesso no banco de dados.");
-        } catch (IOException e) {
-            return ResponseEntity.status(500).body("Erro ao processar o arquivo JSON: " + e.getMessage());
-        }
-    }
 }
