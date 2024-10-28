@@ -1,400 +1,398 @@
-{
-"Planilha1":[
+[
  {
-  "Objeto": "Garrafa de Refrigerante",
-  "Material": "Plástico PET",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Coleta seletiva, lavagem, trituração, e transformação em novas garrafas ou fibras têxteis."
+  "objeto": "Garrafa de Refrigerante",
+  "material": "Plástico PET",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Coleta seletiva, lavagem, trituração, e transformação em novas garrafas ou fibras têxteis."
  },
  {
-  "Objeto": "Tampa de Garrafa",
-  "Material": "Plástico PP",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Lavagem, trituração e transformação em novos produtos plásticos como baldes e utensílios domésticos."
+  "objeto": "Tampa de Garrafa",
+  "material": "Plástico PP",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Lavagem, trituração e transformação em novos produtos plásticos como baldes e utensílios domésticos."
  },
  {
-  "Objeto": "Sacola Plástica",
-  "Material": "Plástico PEAD",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Trituração, transformação em grânulos para criação de novos sacos ou produtos plásticos de alta densidade."
+  "objeto": "Sacola Plástica",
+  "material": "Plástico PEAD",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Trituração, transformação em grânulos para criação de novos sacos ou produtos plásticos de alta densidade."
  },
  {
-  "Objeto": "Garrafa de Cerveja",
-  "Material": "Vidro",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Separação por cor, trituração e derretimento para criação de novos produtos de vidro."
+  "objeto": "Garrafa de Cerveja",
+  "material": "Vidro",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Separação por cor, trituração e derretimento para criação de novos produtos de vidro."
  },
  {
-  "Objeto": "Pote de Iogurte",
-  "Material": "Plástico PP",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Trituração, e transformação em novos produtos plásticos."
+  "objeto": "Pote de Iogurte",
+  "material": "Plástico PP",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Trituração, e transformação em novos produtos plásticos."
  },
  {
-  "Objeto": "Caixa de Papelão",
-  "Material": "Papelão",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Compactação, trituração e reciclagem em novos produtos de papelão ou embalagens."
+  "objeto": "Caixa de Papelão",
+  "material": "Papelão",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Compactação, trituração e reciclagem em novos produtos de papelão ou embalagens."
  },
  {
-  "Objeto": "Lata de Refrigerante",
-  "Material": "Alumínio",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Coleta seletiva, compactação, derretimento e transformação em novas latas de alumínio."
+  "objeto": "Lata de Refrigerante",
+  "material": "Alumínio",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Coleta seletiva, compactação, derretimento e transformação em novas latas de alumínio."
  },
  {
-  "Objeto": "Lata de Sopa",
-  "Material": "Aço",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Derretimento em fornos para criar novos produtos de aço."
+  "objeto": "Lata de Sopa",
+  "material": "Aço",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Derretimento em fornos para criar novos produtos de aço."
  },
  {
-  "Objeto": "Computador",
-  "Material": "Diversos (plástico, metais)",
-  "EhReciclavel": "Sim (parcial)",
-  "Forma_Reciclagem": "Desmontagem, separação de materiais, reciclagem de componentes eletrônicos e metais preciosos."
+  "objeto": "Computador",
+  "material": "Diversos (plástico, metais)",
+  "ehreciclavel": "Sim (parcial)",
+  "formaReciclagem": "Desmontagem, separação de materiais, reciclagem de componentes eletrônicos e metais preciosos."
  },
  {
-  "Objeto": "Bateria de Carro",
-  "Material": "Chumbo-Ácido",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Processos químicos para recuperar o chumbo e ácido, usado em novas baterias."
+  "objeto": "Bateria de Carro",
+  "material": "Chumbo-Ácido",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Processos químicos para recuperar o chumbo e ácido, usado em novas baterias."
  },
  {
-  "Objeto": "Jornal",
-  "Material": "Papel",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Trituração e reciclagem para fazer novo papel reciclado."
+  "objeto": "Jornal",
+  "material": "Papel",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Trituração e reciclagem para fazer novo papel reciclado."
  },
  {
-  "Objeto": "Mesa de Madeira",
-  "Material": "Madeira",
-  "EhReciclavel": "Depende",
-  "Forma_Reciclagem": "Pode ser reutilizada ou transformada em cavacos, MDF, ou aglomerados de madeira para novos produtos."
+  "objeto": "Mesa de Madeira",
+  "material": "Madeira",
+  "ehreciclavel": "Depende",
+  "formaReciclagem": "Pode ser reutilizada ou transformada em cavacos, MDF, ou aglomerados de madeira para novos produtos."
  },
  {
-  "Objeto": "Camiseta de Algodão",
-  "Material": "Algodão",
-  "EhReciclavel": "Sim (parcial)",
-  "Forma_Reciclagem": "Desfibramento e reciclagem em novos tecidos ou outros produtos como enchimentos."
+  "objeto": "Camiseta de Algodão",
+  "material": "Algodão",
+  "ehreciclavel": "Sim (parcial)",
+  "formaReciclagem": "Desfibramento e reciclagem em novos tecidos ou outros produtos como enchimentos."
  },
  {
-  "Objeto": "Óleo de Cozinha Usado",
-  "Material": "Óleo",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Coletado e transformado em biodiesel ou sabão."
+  "objeto": "Óleo de Cozinha Usado",
+  "material": "Óleo",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Coletado e transformado em biodiesel ou sabão."
  },
  {
-  "Objeto": "Bandeja de Isopor",
-  "Material": "EPS (Isopor)",
-  "EhReciclavel": "Sim (difícil)",
-  "Forma_Reciclagem": "Reciclagem especializada, triturado e transformado em novos produtos de EPS ou materiais plásticos."
+  "objeto": "Bandeja de Isopor",
+  "material": "EPS (Isopor)",
+  "ehreciclavel": "Sim (difícil)",
+  "formaReciclagem": "Reciclagem especializada, triturado e transformado em novos produtos de EPS ou materiais plásticos."
  },
  {
-  "Objeto": "Pneu de Carro",
-  "Material": "Borracha",
-  "EhReciclavel": "Sim (parcial)",
-  "Forma_Reciclagem": "Trituração e reutilização em asfalto borrachoso, pisos ou combustível alternativo."
+  "objeto": "Pneu de Carro",
+  "material": "Borracha",
+  "ehreciclavel": "Sim (parcial)",
+  "formaReciclagem": "Trituração e reutilização em asfalto borrachoso, pisos ou combustível alternativo."
  },
  {
-  "Objeto": "Azulejo",
-  "Material": "Cerâmica",
-  "EhReciclavel": "Não",
-  "Forma_Reciclagem": "Não reciclável, geralmente usado como base para pavimentos ou descarte em aterros."
+  "objeto": "Azulejo",
+  "material": "Cerâmica",
+  "ehreciclavel": "Não",
+  "formaReciclagem": "Não reciclável, geralmente usado como base para pavimentos ou descarte em aterros."
  },
  {
-  "Objeto": "Copos Descartáveis",
-  "Material": "Poliestireno (PS)",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Reciclagem envolve trituração e derretimento para criar novos produtos plásticos."
+  "objeto": "Copos Descartáveis",
+  "material": "Poliestireno (PS)",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Reciclagem envolve trituração e derretimento para criar novos produtos plásticos."
  },
  {
-  "Objeto": "Cabo Elétrico",
-  "Material": "Cobre, Plástico",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Separação de plástico e derretimento do cobre para reutilização em novos cabos."
+  "objeto": "Cabo Elétrico",
+  "material": "Cobre, Plástico",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Separação de plástico e derretimento do cobre para reutilização em novos cabos."
  },
  {
-  "Objeto": "Talheres de Aço Inox",
-  "Material": "Aço Inoxidável",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Fundição em altas temperaturas e transformação em novos produtos de aço inox."
+  "objeto": "Talheres de Aço Inox",
+  "material": "Aço Inoxidável",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Fundição em altas temperaturas e transformação em novos produtos de aço inox."
  },
  {
-  "Objeto": "Embalagem de Shampoo",
-  "Material": "Plástico PEAD",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Lavagem, trituração e transformação em novos produtos plásticos de alta densidade."
+  "objeto": "Embalagem de Shampoo",
+  "material": "Plástico PEAD",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Lavagem, trituração e transformação em novos produtos plásticos de alta densidade."
  },
  {
-  "Objeto": "Tubulação de PVC",
-  "Material": "PVC (Policloreto de Vinila)",
-  "EhReciclavel": "Sim (difícil)",
-  "Forma_Reciclagem": "Reciclado em processos especializados para criar novos tubos ou materiais de construção."
+  "objeto": "Tubulação de PVC",
+  "material": "PVC (Policloreto de Vinila)",
+  "ehreciclavel": "Sim (difícil)",
+  "formaReciclagem": "Reciclado em processos especializados para criar novos tubos ou materiais de construção."
  },
  {
-  "Objeto": "Roupas de Poliéster",
-  "Material": "Poliéster",
-  "EhReciclavel": "Sim (parcial)",
-  "Forma_Reciclagem": "Reciclagem têxtil, desfibramento e reutilização para novos tecidos ou outros produtos."
+  "objeto": "Roupas de Poliéster",
+  "material": "Poliéster",
+  "ehreciclavel": "Sim (parcial)",
+  "formaReciclagem": "Reciclagem têxtil, desfibramento e reutilização para novos tecidos ou outros produtos."
  },
  {
-  "Objeto": "Vidro de Perfume",
-  "Material": "Vidro",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Separação por cor, trituração e derretimento para fabricação de novos frascos de vidro."
+  "objeto": "Vidro de Perfume",
+  "material": "Vidro",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Separação por cor, trituração e derretimento para fabricação de novos frascos de vidro."
  },
  {
-  "Objeto": "Lâmpada Fluorescente",
-  "Material": "Vidro, metais, mercúrio",
-  "EhReciclavel": "Sim (parcial)",
-  "Forma_Reciclagem": "Desmontagem para recuperação de metais e vidro, com tratamento específico para o mercúrio."
+  "objeto": "Lâmpada Fluorescente",
+  "material": "Vidro, metais, mercúrio",
+  "ehreciclavel": "Sim (parcial)",
+  "formaReciclagem": "Desmontagem para recuperação de metais e vidro, com tratamento específico para o mercúrio."
  },
  {
-  "Objeto": "Televisão Antiga",
-  "Material": "Diversos (vidro, plástico, metais)",
-  "EhReciclavel": "Sim (parcial)",
-  "Forma_Reciclagem": "Desmontagem, separação de materiais para reciclagem de componentes eletrônicos e metais."
+  "objeto": "Televisão Antiga",
+  "material": "Diversos (vidro, plástico, metais)",
+  "ehreciclavel": "Sim (parcial)",
+  "formaReciclagem": "Desmontagem, separação de materiais para reciclagem de componentes eletrônicos e metais."
  },
  {
-  "Objeto": "Pilhas AA",
-  "Material": "Metais pesados (níquel, cádmio, lítio)",
-  "EhReciclavel": "Sim (parcial)",
-  "Forma_Reciclagem": "Processos especializados para separação e reutilização de metais, evitando contaminação ambiental."
+  "objeto": "Pilhas AA",
+  "material": "Metais pesados (níquel, cádmio, lítio)",
+  "ehreciclavel": "Sim (parcial)",
+  "formaReciclagem": "Processos especializados para separação e reutilização de metais, evitando contaminação ambiental."
  },
  {
-  "Objeto": "Enlatado de Feijão",
-  "Material": "Aço",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Compactação e derretimento para criação de novos produtos de aço."
+  "objeto": "Enlatado de Feijão",
+  "material": "Aço",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Compactação e derretimento para criação de novos produtos de aço."
  },
  {
-  "Objeto": "Frasco de Cosmético",
-  "Material": "Vidro",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Coleta seletiva, trituração e derretimento para fabricação de novos frascos de vidro."
+  "objeto": "Frasco de Cosmético",
+  "material": "Vidro",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Coleta seletiva, trituração e derretimento para fabricação de novos frascos de vidro."
  },
  {
-  "Objeto": "Borracha de Solado de Sapato",
-  "Material": "Borracha",
-  "EhReciclavel": "Sim (parcial)",
-  "Forma_Reciclagem": "Trituração e reutilização para pisos de borracha ou outros materiais flexíveis."
+  "objeto": "Borracha de Solado de Sapato",
+  "material": "Borracha",
+  "ehreciclavel": "Sim (parcial)",
+  "formaReciclagem": "Trituração e reutilização para pisos de borracha ou outros materiais flexíveis."
  },
  {
-  "Objeto": "Caixa de Leite (Tetrapak)",
-  "Material": "Papel, Plástico, Alumínio",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Separação de camadas de papel, plástico e alumínio para reciclagem de cada material individualmente."
+  "objeto": "Caixa de Leite (Tetrapak)",
+  "material": "Papel, Plástico, Alumínio",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Separação de camadas de papel, plástico e alumínio para reciclagem de cada material individualmente."
  },
  {
-  "Objeto": "Guardanapo Usado",
-  "Material": "Papel",
-  "EhReciclavel": "Não",
-  "Forma_Reciclagem": "Não reciclável devido à contaminação por alimentos e outros resíduos; deve ser compostado ou descartado."
+  "objeto": "Guardanapo Usado",
+  "material": "Papel",
+  "ehreciclavel": "Não",
+  "formaReciclagem": "Não reciclável devido à contaminação por alimentos e outros resíduos; deve ser compostado ou descartado."
  },
  {
-  "Objeto": "Copo de Vidro",
-  "Material": "Vidro",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Trituração e derretimento para fabricação de novos copos ou produtos de vidro."
+  "objeto": "Copo de Vidro",
+  "material": "Vidro",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Trituração e derretimento para fabricação de novos copos ou produtos de vidro."
  },
  {
-  "Objeto": "Espelho",
-  "Material": "Vidro, Prata (revestimento)",
-  "EhReciclavel": "Não",
-  "Forma_Reciclagem": "Não reciclável devido ao revestimento de prata; geralmente descartado em aterros."
+  "objeto": "Espelho",
+  "material": "Vidro, Prata (revestimento)",
+  "ehreciclavel": "Não",
+  "formaReciclagem": "Não reciclável devido ao revestimento de prata; geralmente descartado em aterros."
  },
  {
-  "Objeto": "Disco de Vinil",
-  "Material": "PVC (Policloreto de Vinila)",
-  "EhReciclavel": "Sim (difícil)",
-  "Forma_Reciclagem": "Pode ser reciclado em instalações especializadas para criação de novos produtos de PVC, mas é incomum."
+  "objeto": "Disco de Vinil",
+  "material": "PVC (Policloreto de Vinila)",
+  "ehreciclavel": "Sim (difícil)",
+  "formaReciclagem": "Pode ser reciclado em instalações especializadas para criação de novos produtos de PVC, mas é incomum."
  },
  {
-  "Objeto": "Fio de Cobre",
-  "Material": "Cobre, Plástico",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Derretimento do cobre para reutilização, com separação do plástico do revestimento."
+  "objeto": "Fio de Cobre",
+  "material": "Cobre, Plástico",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Derretimento do cobre para reutilização, com separação do plástico do revestimento."
  },
  {
-  "Objeto": "Capa de Chuva",
-  "Material": "Plástico PVC",
-  "EhReciclavel": "Sim (difícil)",
-  "Forma_Reciclagem": "Reciclagem especializada para transformar em novos produtos de PVC, como canos ou materiais de construção."
+  "objeto": "Capa de Chuva",
+  "material": "Plástico PVC",
+  "ehreciclavel": "Sim (difícil)",
+  "formaReciclagem": "Reciclagem especializada para transformar em novos produtos de PVC, como canos ou materiais de construção."
  },
  {
-  "Objeto": "Envelope de Correspondência",
-  "Material": "Papel",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Coleta seletiva, trituração e transformação em papel reciclado ou novos produtos de papel."
+  "objeto": "Envelope de Correspondência",
+  "material": "Papel",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Coleta seletiva, trituração e transformação em papel reciclado ou novos produtos de papel."
  },
  {
-  "Objeto": "Prato Descartável",
-  "Material": "Plástico (PS), Papel",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Plástico pode ser triturado e derretido, enquanto o papel é reciclado para fabricação de novos produtos de papel."
+  "objeto": "Prato Descartável",
+  "material": "Plástico (PS), Papel",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Plástico pode ser triturado e derretido, enquanto o papel é reciclado para fabricação de novos produtos de papel."
  },
  {
-  "Objeto": "Filtro de Café Usado",
-  "Material": "Papel",
-  "EhReciclavel": "Não",
-  "Forma_Reciclagem": "Não reciclável, porém pode ser compostado juntamente com os restos de café."
+  "objeto": "Filtro de Café Usado",
+  "material": "Papel",
+  "ehreciclavel": "Não",
+  "formaReciclagem": "Não reciclável, porém pode ser compostado juntamente com os restos de café."
  },
  {
-  "Objeto": "Saco de Papel",
-  "Material": "Papel Kraft",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Coleta seletiva, trituração e reciclagem para fabricação de papel reciclado."
+  "objeto": "Saco de Papel",
+  "material": "Papel Kraft",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Coleta seletiva, trituração e reciclagem para fabricação de papel reciclado."
  },
  {
-  "Objeto": "Porta de Madeira",
-  "Material": "Madeira",
-  "EhReciclavel": "Depende",
-  "Forma_Reciclagem": "Pode ser reutilizada ou transformada em cavacos, MDF, ou aglomerados de madeira para novos produtos."
+  "objeto": "Porta de Madeira",
+  "material": "Madeira",
+  "ehreciclavel": "Depende",
+  "formaReciclagem": "Pode ser reutilizada ou transformada em cavacos, MDF, ou aglomerados de madeira para novos produtos."
  },
  {
-  "Objeto": "Caixa de Ovos",
-  "Material": "Papelão, Poliestireno (PS)",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Papelão pode ser reciclado através de compactação e trituração; poliestireno reciclado em instalações especializadas."
+  "objeto": "Caixa de Ovos",
+  "material": "Papelão, Poliestireno (PS)",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Papelão pode ser reciclado através de compactação e trituração; poliestireno reciclado em instalações especializadas."
  },
  {
-  "Objeto": "Frasco de Remédio (Plástico)",
-  "Material": "Plástico PP",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Lavagem, trituração e transformação em novos produtos plásticos como utensílios ou embalagens."
+  "objeto": "Frasco de Remédio (Plástico)",
+  "material": "Plástico PP",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Lavagem, trituração e transformação em novos produtos plásticos como utensílios ou embalagens."
  },
  {
-  "Objeto": "Escova de Dentes",
-  "Material": "Plástico, Borracha",
-  "EhReciclavel": "Não",
-  "Forma_Reciclagem": "Devido à composição mista de materiais e ao custo do processo, escovas de dentes geralmente não são recicladas."
+  "objeto": "Escova de Dentes",
+  "material": "Plástico, Borracha",
+  "ehreciclavel": "Não",
+  "formaReciclagem": "Devido à composição mista de materiais e ao custo do processo, escovas de dentes geralmente não são recicladas."
  },
  {
-  "Objeto": "Lâmpada de LED",
-  "Material": "Plástico, Vidro, Metais",
-  "EhReciclavel": "Sim (parcial)",
-  "Forma_Reciclagem": "Desmontagem e separação de componentes como metais e vidro para reciclagem; o plástico pode ser incinerado."
+  "objeto": "Lâmpada de LED",
+  "material": "Plástico, Vidro, Metais",
+  "ehreciclavel": "Sim (parcial)",
+  "formaReciclagem": "Desmontagem e separação de componentes como metais e vidro para reciclagem; o plástico pode ser incinerado."
  },
  {
-  "Objeto": "Cartão de Crédito",
-  "Material": "Plástico PVC",
-  "EhReciclavel": "Sim (difícil)",
-  "Forma_Reciclagem": "Pode ser reciclado em instalações especializadas para criação de novos produtos de PVC."
+  "objeto": "Cartão de Crédito",
+  "material": "Plástico PVC",
+  "ehreciclavel": "Sim (difícil)",
+  "formaReciclagem": "Pode ser reciclado em instalações especializadas para criação de novos produtos de PVC."
  },
  {
-  "Objeto": "Garfo de Plástico",
-  "Material": "Plástico (PS)",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Trituração e derretimento para criação de novos produtos plásticos."
+  "objeto": "Garfo de Plástico",
+  "material": "Plástico (PS)",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Trituração e derretimento para criação de novos produtos plásticos."
  },
  {
-  "Objeto": "Livro Antigo",
-  "Material": "Papel",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Coleta seletiva, trituração e reciclagem em novos produtos de papel ou papel reciclado."
+  "objeto": "Livro Antigo",
+  "material": "Papel",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Coleta seletiva, trituração e reciclagem em novos produtos de papel ou papel reciclado."
  },
  {
-  "Objeto": "Sofá Velho",
-  "Material": "Madeira, Tecidos, Espuma",
-  "EhReciclavel": "Sim (parcial)",
-  "Forma_Reciclagem": "A madeira e o tecido podem ser reciclados, e a espuma pode ser reutilizada em produtos de enchimento."
+  "objeto": "Sofá Velho",
+  "material": "Madeira, Tecidos, Espuma",
+  "ehreciclavel": "Sim (parcial)",
+  "formaReciclagem": "A madeira e o tecido podem ser reciclados, e a espuma pode ser reutilizada em produtos de enchimento."
  },
  {
-  "Objeto": "Papel de Alumínio",
-  "Material": "Alumínio",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Reciclável em instalações especializadas através de derretimento para criar novos produtos de alumínio."
+  "objeto": "Papel de Alumínio",
+  "material": "Alumínio",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Reciclável em instalações especializadas através de derretimento para criar novos produtos de alumínio."
  },
  {
-  "Objeto": "Brinquedo de Plástico",
-  "Material": "Plástico (diversos tipos)",
-  "EhReciclavel": "Sim (dependente do plástico)",
-  "Forma_Reciclagem": "Reciclável em instalações especializadas, dependendo do tipo de plástico usado."
+  "objeto": "Brinquedo de Plástico",
+  "material": "Plástico (diversos tipos)",
+  "ehreciclavel": "Sim (dependente do plástico)",
+  "formaReciclagem": "Reciclável em instalações especializadas, dependendo do tipo de plástico usado."
  },
  {
-  "Objeto": "Revista",
-  "Material": "Papel",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Trituração e reciclagem para fazer novos produtos de papel."
+  "objeto": "Revista",
+  "material": "Papel",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Trituração e reciclagem para fazer novos produtos de papel."
  },
  {
-  "Objeto": "Bola de Futebol",
-  "Material": "Couro, Borracha",
-  "EhReciclavel": "Não",
-  "Forma_Reciclagem": "Geralmente não reciclável devido à composição mista de materiais."
+  "objeto": "Bola de Futebol",
+  "material": "Couro, Borracha",
+  "ehreciclavel": "Não",
+  "formaReciclagem": "Geralmente não reciclável devido à composição mista de materiais."
  },
  {
-  "Objeto": "Chinelo de Borracha",
-  "Material": "Borracha",
-  "EhReciclavel": "Sim (parcial)",
-  "Forma_Reciclagem": "Trituração e reutilização em produtos como pisos de borracha ou materiais de construção."
+  "objeto": "Chinelo de Borracha",
+  "material": "Borracha",
+  "ehreciclavel": "Sim (parcial)",
+  "formaReciclagem": "Trituração e reutilização em produtos como pisos de borracha ou materiais de construção."
  },
  {
-  "Objeto": "Botijão de Gás",
-  "Material": "Aço",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Reciclável através de derretimento do aço para fabricação de novos produtos metálicos."
+  "objeto": "Botijão de Gás",
+  "material": "Aço",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Reciclável através de derretimento do aço para fabricação de novos produtos metálicos."
  },
  {
-  "Objeto": "Tijolo",
-  "Material": "Cerâmica, Argila",
-  "EhReciclavel": "Não",
-  "Forma_Reciclagem": "Não reciclável, mas pode ser reutilizado em construções como base ou em pavimentações."
+  "objeto": "Tijolo",
+  "material": "Cerâmica, Argila",
+  "ehreciclavel": "Não",
+  "formaReciclagem": "Não reciclável, mas pode ser reutilizado em construções como base ou em pavimentações."
  },
  {
-  "Objeto": "Bicicleta Velha",
-  "Material": "Metal (Aço, Alumínio), Borracha",
-  "EhReciclavel": "Sim (parcial)",
-  "Forma_Reciclagem": "O metal é reciclável por derretimento, e os pneus e câmaras de ar podem ser reutilizados ou reciclados."
+  "objeto": "Bicicleta Velha",
+  "material": "Metal (Aço, Alumínio), Borracha",
+  "ehreciclavel": "Sim (parcial)",
+  "formaReciclagem": "O metal é reciclável por derretimento, e os pneus e câmaras de ar podem ser reutilizados ou reciclados."
  },
  {
-  "Objeto": "Frasco de Molho de Tomate",
-  "Material": "Vidro",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Coleta seletiva, trituração e derretimento para criar novos produtos de vidro."
+  "objeto": "Frasco de Molho de Tomate",
+  "material": "Vidro",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Coleta seletiva, trituração e derretimento para criar novos produtos de vidro."
  },
  {
-  "Objeto": "Bandeja de Alumínio",
-  "Material": "Alumínio",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Lavagem, derretimento e reutilização do alumínio para criar novos produtos."
+  "objeto": "Bandeja de Alumínio",
+  "material": "Alumínio",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Lavagem, derretimento e reutilização do alumínio para criar novos produtos."
  },
  {
-  "Objeto": "Chave Inglesa",
-  "Material": "Aço",
-  "EhReciclavel": "Sim",
-  "Forma_Reciclagem": "Reciclável por fusão do aço para criação de novos produtos."
+  "objeto": "Chave Inglesa",
+  "material": "Aço",
+  "ehreciclavel": "Sim",
+  "formaReciclagem": "Reciclável por fusão do aço para criação de novos produtos."
  },
  {
-  "Objeto": "Fogão Velho",
-  "Material": "Metal (Aço, Alumínio), Plástico",
-  "EhReciclavel": "Sim (parcial)",
-  "Forma_Reciclagem": "Os metais podem ser reciclados por derretimento, enquanto plásticos e componentes elétricos podem ser separados."
+  "objeto": "Fogão Velho",
+  "material": "Metal (Aço, Alumínio), Plástico",
+  "ehreciclavel": "Sim (parcial)",
+  "formaReciclagem": "Os metais podem ser reciclados por derretimento, enquanto plásticos e componentes elétricos podem ser separados."
  },
  {
-  "Objeto": "Sapato de Couro",
-  "Material": "Couro, Borracha",
-  "EhReciclavel": "Não",
-  "Forma_Reciclagem": "Geralmente não reciclável, mas pode ser reutilizado em outras formas, como reformas ou doações."
+  "objeto": "Sapato de Couro",
+  "material": "Couro, Borracha",
+  "ehreciclavel": "Não",
+  "formaReciclagem": "Geralmente não reciclável, mas pode ser reutilizado em outras formas, como reformas ou doações."
  },
  {
-  "Objeto": "Fralda Descartável",
-  "Material": "Plástico, Papel",
-  "EhReciclavel": "Não",
-  "Forma_Reciclagem": "Não reciclável devido à contaminação e à composição mista de materiais."
+  "objeto": "Fralda Descartável",
+  "material": "Plástico, Papel",
+  "ehreciclavel": "Não",
+  "formaReciclagem": "Não reciclável devido à contaminação e à composição mista de materiais."
  },
  {
-  "Objeto": "Câmara de Ar de Pneu",
-  "Material": "Borracha",
-  "EhReciclavel": "Sim (parcial)",
-  "Forma_Reciclagem": "Reciclada ou reutilizada para fabricação de novos produtos de borracha."
+  "objeto": "Câmara de Ar de Pneu",
+  "material": "Borracha",
+  "ehreciclavel": "Sim (parcial)",
+  "formaReciclagem": "Reciclada ou reutilizada para fabricação de novos produtos de borracha."
  },
  {
-  "Objeto": "Envelope com Janela de Plástico",
-  "Material": "Papel, Plástico",
-  "EhReciclavel": "Sim (parcial)",
-  "Forma_Reciclagem": "O papel pode ser reciclado, mas a janela de plástico deve ser removida, o que pode dificultar o processo."
+  "objeto": "Envelope com Janela de Plástico",
+  "material": "Papel, Plástico",
+  "ehreciclavel": "Sim (parcial)",
+  "formaReciclagem": "O papel pode ser reciclado, mas a janela de plástico deve ser removida, o que pode dificultar o processo."
  }
 ]
-}
