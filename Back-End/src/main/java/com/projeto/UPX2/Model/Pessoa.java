@@ -1,6 +1,7 @@
 package com.projeto.UPX2.Model;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -21,7 +22,8 @@ public class Pessoa {
     private String cidade;
     private String estado;
 
-    @OneToMany(mappedBy = "pessoa", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "pessoa", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JsonManagedReference
     private List<Lembrete> lembretes = new ArrayList<>();
 
     public Pessoa(){}

@@ -1,5 +1,6 @@
 package com.projeto.UPX2.Model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
@@ -18,6 +19,7 @@ public class Lembrete {
     private LocalTime horario;
 
     @ManyToOne
+    @JsonBackReference
     private Pessoa pessoa;
 
     public Lembrete(){}
