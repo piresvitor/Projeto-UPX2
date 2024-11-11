@@ -126,3 +126,8 @@ Para visualizar a documentação interativa no Swagger Editor, siga os passos ab
 ## Contato
 
 Para dúvidas ou sugestões, entre em contato com o desenvolvedor.
+
+## Melhorias futuras
+
+Melhoria na interface do frontend
+Criação de novas rotas 

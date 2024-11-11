@@ -143,3 +143,38 @@ async function cadastrarPessoaJuridica() {
         console.error("Erro:", error);
     }
 }
+
+async function cadastrarLembrete() {
+    const idPessoa = document.getElementById("idPessoa").value;
+    const nome = document.getElementById("nome").value;
+    const data = document.getElementById("data").value;
+    const horario = document.getElementById("horario").value;
+
+    const lembrete = {
+        nome: nome,
+        data: data,
+        horario: horario
+    };
+
+    try {
+        const response = await fetch(`http://localhost:8080/lembretes/cadastro/${idPessoa}`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(lembrete)
+        });
+
+        if (response.ok) {
+            const resultado = await response.json();
+            document.getElementById("resultado").innerHTML = `<p style="color: green;">Lembrete cadastrado com sucesso! ID: ${resultado.id}</p>`;
+            document.getElementById("lembreteForm").reset();
+        } else {
+            const error = await response.json();
+            document.getElementById("resultado").innerHTML = `<p style="color: red;">Erro: ${error.message}</p>`;
+        }
+    } catch (error) {
+        document.getElementById("resultado").innerHTML = `<p style="color: red;">Erro ao cadastrar o lembrete.</p>`;
+        console.error("Erro:", error);
+    }
+}
