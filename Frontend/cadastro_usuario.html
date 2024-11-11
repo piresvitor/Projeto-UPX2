@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Pessoas - Centro de Reciclagem</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Formulário de Cadastro de Pessoa Física -->
+        <section id="cadastro-pessoa">
+            <h2 class="titulo">Cadastro de Pessoa Física</h2>
+            <form id="pessoa-form">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" required>
+
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" required>
+
+                <label for="rua">Rua:</label>
+                <input type="text" id="rua" required>
+
+                <label for="bairro">Bairro:</label>
+                <input type="text" id="bairro" required>
+
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" required>
+
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" required>
+
+                <button type="button" onclick="cadastrarPessoa()">Cadastrar Pessoa Física</button>
+            </form>
+        </section>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
