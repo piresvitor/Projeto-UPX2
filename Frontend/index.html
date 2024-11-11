@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Busca de Materiais - Centro de Reciclagem</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Busca de Materiais Recicláveis</h1>
+
+        <!-- Seção de Busca por Material -->
+        <section id="busca-material">
+            <label for="material">Digite o material:</label>
+            <input type="text" id="material" placeholder="Ex: Plástico, Metal" required>
+            <button onclick="buscarMateriais()">Buscar</button>
+        </section>
+
+        <!-- Resultados da Busca -->
+        <section id="resultados">
+            <h2>Resultados da Busca:</h2>
+            <div id="resultados-lista"></div>
+        </section>
+
+        <!-- Seção de Centros de Reciclagem -->
+        <section id="busca-centro">
+            <h2>Buscar Centros de Reciclagem por Cidade</h2>
+            <label for="cidade">Digite a cidade:</label>
+            <input type="text" id="cidade" placeholder="Ex: São Paulo" required>
+            <button onclick="buscarCentros()">Buscar Centros</button>
+            <div id="centros-lista"></div>
+        </section>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
