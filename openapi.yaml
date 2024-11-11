@@ -1,0 +1,237 @@
+openapi: 3.0.0
+info:
+  title: API de Gerenciamento de Pessoas e Centros de Reciclagem
+  description: API para gerenciar pessoas físicas, centros de reciclagem e lembretes associados
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+paths:
+  /pessoas/cadastro:
+    post:
+      summary: Cadastra uma nova pessoa física
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nome:
+                  type: string
+                email:
+                  type: string
+                senha:
+                  type: string
+                cep:
+                  type: string
+                rua:
+                  type: string
+                bairro:
+                  type: string
+                cidade:
+                  type: string
+                estado:
+                  type: string
+              required:
+                - nome
+                - email
+                - senha
+                - cep
+                - rua
+                - bairro
+                - cidade
+                - estado
+      responses:
+        '201':
+          description: Pessoa cadastrada com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pessoa'
+        '400':
+          description: Parâmetros inválidos ou incompletos
+
+  /pessoas-juridicas/cadastro:
+    post:
+      summary: Cadastra uma nova pessoa jurídica (centro de reciclagem)
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nome:
+                  type: string
+                email:
+                  type: string
+                senha:
+                  type: string
+                cep:
+                  type: string
+                rua:
+                  type: string
+                bairro:
+                  type: string
+                cidade:
+                  type: string
+                estado:
+                  type: string
+              required:
+                - nome
+                - email
+                - senha
+                - cep
+                - rua
+                - bairro
+                - cidade
+                - estado
+      responses:
+        '201':
+          description: Centro de reciclagem cadastrado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PessoaJuridica'
+        '400':
+          description: Parâmetros inválidos ou incompletos
+
+  /pessoas-juridicas/buscar/{nome_da_cidade}:
+    get:
+      summary: Busca centros de reciclagem por cidade
+      parameters:
+        - in: path
+          name: nome_da_cidade
+          schema:
+            type: string
+          required: true
+          description: Nome da cidade para a busca
+      responses:
+        '200':
+          description: Lista de centros de reciclagem encontrados
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/PessoaJuridica'
+        '404':
+          description: Nenhum centro de reciclagem encontrado para a cidade especificada
+
+  /lembretes/cadastro/{id_pessoa}:
+    post:
+      summary: Cadastra um novo lembrete associado a uma pessoa
+      parameters:
+        - in: path
+          name: id_pessoa
+          schema:
+            type: integer
+          required: true
+          description: ID da pessoa associada ao lembrete
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                nome:
+                  type: string
+                data:
+                  type: string
+                  format: date
+                horario:
+                  type: string
+                  format: time
+              required:
+                - nome
+                - data
+                - horario
+      responses:
+        '201':
+          description: Lembrete cadastrado com sucesso
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Lembrete'
+        '404':
+          description: ID da pessoa não encontrado
+
+  /lembretes/buscar/{id_pessoa}:
+    get:
+      summary: Retorna todos os lembretes cadastrados para uma pessoa
+      parameters:
+        - in: path
+          name: id_pessoa
+          schema:
+            type: integer
+          required: true
+          description: ID da pessoa associada aos lembretes
+      responses:
+        '200':
+          description: Lista de lembretes da pessoa
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Lembrete'
+        '404':
+          description: Nenhum lembrete encontrado para a pessoa especificada
+
+components:
+  schemas:
+    Pessoa:
+      type: object
+      properties:
+        id:
+          type: integer
+        nome:
+          type: string
+        email:
+          type: string
+        cep:
+          type: string
+        rua:
+          type: string
+        bairro:
+          type: string
+        cidade:
+          type: string
+        estado:
+          type: string
+    PessoaJuridica:
+      type: object
+      properties:
+        id:
+          type: integer
+        nome:
+          type: string
+        email:
+          type: string
+        cep:
+          type: string
+        rua:
+          type: string
+        bairro:
+          type: string
+        cidade:
+          type: string
+        estado:
+          type: string
+    Lembrete:
+      type: object
+      properties:
+        id:
+          type: integer
+        nome:
+          type: string
+        data:
+          type: string
+          format: date
+        horario:
+          type: string
+          format: time
+        pessoa:
+          $ref: '#/components/schemas/Pessoa'
+
