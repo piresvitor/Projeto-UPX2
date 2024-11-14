@@ -66,6 +66,55 @@ Essa API permite o gerenciamento de pessoas físicas e jurídicas (centros de re
 **Método:** GET
 **Descrição:** Retorna todos os lembretes cadastrados para uma pessoa especificada.
 
+### Estrutura de Dados
+
+## Materiais
+```json
+{
+  "id": 1,
+  "objeto": "Garrafa de plástico",
+  "descricao": "Material reciclável feito de plástico PET"
+}
+```
+
+## Pessoa
+```json
+{
+  "id": 1,
+  "nome": "João Silva",
+  "email": "joao.silva@email.com",
+  "senha": "senha123",
+  "cep": "12345-678",
+  "rua": "Rua Exemplo",
+  "bairro": "Bairro Teste",
+  "cidade": "Cidade Exemplo",
+  "estado": "Estado Exemplo"
+}
+```
+
+## Centro de Reciclagem
+```json
+{
+  "id": 1,
+  "nome": "Centro de Reciclagem ABC",
+  "email": "contato@reciclagemabc.com",
+  "senha": "senha123",
+  "cep": "98765-432",
+  "rua": "Rua das Flores",
+  "bairro": "Bairro Verde",
+  "cidade": "Cidade Verde",
+  "estado": "Estado Verde"
+}
+```
+## Lembrete
+```json
+{
+  "id": 1,
+  "nome": "Lembrete para coleta seletiva",
+  "data": "2024-12-01",
+  "horario": "15:00:00"
+}
+```
 
 ## Front-end
 
