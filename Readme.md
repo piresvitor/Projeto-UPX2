@@ -12,11 +12,13 @@ Essa API permite o gerenciamento de pessoas físicas e jurídicas (centros de re
 
 ### Funcionalidades Principais
 
-1. **Cadastro de Pessoas Físicas**
-2. **Cadastro de Centros de Reciclagem (Pessoas Jurídicas)**
-3. **Busca de Centros de Reciclagem por Cidade**
-4. **Cadastro de Lembretes**
-5. **Busca de Lembretes por Pessoa**
+
+1. **Pesquisa de Materiais Recicláveis**
+2. **Cadastro de Pessoas Físicas**
+3. **Cadastro de Centros de Reciclagem (Pessoas Jurídicas)**
+4. **Busca de Centros de Reciclagem por Cidade**
+5. **Cadastro de Lembretes**
+6. **Busca de Lembretes por Pessoa**
 
 ## Tecnologias Utilizadas
 
@@ -29,11 +31,11 @@ Essa API permite o gerenciamento de pessoas físicas e jurídicas (centros de re
 
 ### Endpoints
 
-### Materiais
+## Materiais
 - **GET `/materiais/buscar`**: Busca materiais recicláveis contendo um texto específico.
 - **POST `/materiais/gravar-materiais`**: Carrega um arquivo JSON de materiais e salva no banco de dados.
 
-#### Cadastro de Pessoas Físicas
+## Cadastro de Pessoas Físicas
 
 - **POST `/pessoas/cadastro`**: Cadastra uma nova pessoa física.
 - **PUT `/pessoas/{id}`**: Atualiza uma pessoa física existente pelo ID.
@@ -46,19 +48,19 @@ Essa API permite o gerenciamento de pessoas físicas e jurídicas (centros de re
 - **PUT `/pessoas-juridicas/{id}`**: Atualiza uma pessoa jurídica existente pelo ID.
 - **DELETE `/pessoas-juridicas/{id}`**: Deleta uma pessoa jurídica pelo ID.
 
-## Busca de Centros de Reciclagem por Cidade
+### Busca de Centros de Reciclagem por Cidade
 
 **Endpoint:** `/pessoas-juridicas/buscar/{nome_da_cidade}`
 **Método:** GET
 **Descrição:** Retorna todos os centros de reciclagem de uma cidade especificada.
 
-### Lembretes
+## Lembretes
 - **POST `/lembretes/cadastro/{pessoaId}`**: Cadastra um novo lembrete para uma pessoa (física ou jurídica).
 - **GET `/lembretes/pessoa/{pessoaId}`**: Busca todos os lembretes de uma pessoa pelo ID.
 - **PUT `/lembretes/{id}`**: Atualiza um lembrete existente pelo ID.
 - **DELETE `/lembretes/{id}`**: Deleta um lembrete pelo ID.
 
-## Busca de Lembretes por Pessoa
+### Busca de Lembretes por Pessoa
 
 **Endpoint:** `/lembretes/buscar/{id_pessoa}`
 **Método:** GET
