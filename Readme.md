@@ -66,9 +66,9 @@ Essa API permite o gerenciamento de pessoas físicas e jurídicas (centros de re
 **Método:** GET
 **Descrição:** Retorna todos os lembretes cadastrados para uma pessoa especificada.
 
-### Estrutura de Dados
+## Estrutura de Dados
 
-## Materiais
+### Materiais
 ```json
 {
   "id": 1,
@@ -77,7 +77,7 @@ Essa API permite o gerenciamento de pessoas físicas e jurídicas (centros de re
 }
 ```
 
-## Pessoa
+### Pessoa
 ```json
 {
   "id": 1,
@@ -92,7 +92,7 @@ Essa API permite o gerenciamento de pessoas físicas e jurídicas (centros de re
 }
 ```
 
-## Centro de Reciclagem
+### Centro de Reciclagem
 ```json
 {
   "id": 1,
@@ -106,7 +106,7 @@ Essa API permite o gerenciamento de pessoas físicas e jurídicas (centros de re
   "estado": "Estado Verde"
 }
 ```
-## Lembrete
+### Lembrete
 ```json
 {
   "id": 1,
