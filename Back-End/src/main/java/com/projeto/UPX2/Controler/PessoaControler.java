@@ -16,10 +16,28 @@ public class PessoaControler {
     // Endpoint para cadastrar uma nova pessoa
     @PostMapping("/cadastro")
     public ResponseEntity<Pessoa> cadastrarPessoa(@RequestBody Pessoa pessoa) {
-        // Cadastra a pessoa e salva no banco de dados
         Pessoa novaPessoa = pessoaService.cadastrarPessoa(pessoa);
-
-        // Retorna a pessoa cadastrada com o status HTTP 201
         return ResponseEntity.status(201).body(novaPessoa);
     }
+
+    // Endpoint para atualizar uma pessoa pelo ID
+    @PutMapping("/atualizar/{id}")
+    public ResponseEntity<Pessoa> atualizarPessoa(@PathVariable Long id, @RequestBody Pessoa pessoaAtualizada) {
+        Pessoa pessoa = pessoaService.atualizarPessoa(id, pessoaAtualizada);
+        if (pessoa == null) {
+            return ResponseEntity.notFound().build(); // Retorna 404 caso a pessoa não seja encontrada
+        }
+        return ResponseEntity.ok(pessoa); // Retorna a pessoa atualizada com status 200
+    }
+
+    // Endpoint para deletar uma pessoa pelo ID
+    @DeleteMapping("/deletar/{id}")
+    public ResponseEntity<Void> deletarPessoa(@PathVariable Long id) {
+        boolean deletada = pessoaService.deletarPessoa(id);
+        if (!deletada) {
+            return ResponseEntity.notFound().build(); // Retorna 404 caso a pessoa não seja encontrada
+        }
+        return ResponseEntity.noContent().build(); // Retorna 204 No Content caso a pessoa seja deletada
+    }
 }
+

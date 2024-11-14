@@ -15,17 +15,33 @@ public class LembreteControler {
     @Autowired
     private LembreteService lembreteService;
 
-    // Rota para cadastrar um lembrete associado a uma pessoa
+    // Cadastra um lembrete associado a uma pessoa
     @PostMapping("/cadastro/{pessoaId}")
     public ResponseEntity<Lembrete> cadastrarLembrete(@PathVariable Long pessoaId, @RequestBody Lembrete lembrete) {
         Lembrete novoLembrete = lembreteService.cadastrarLembrete(pessoaId, lembrete);
         return ResponseEntity.status(201).body(novoLembrete);
     }
 
-    // Rota para buscar todos os lembretes de uma pessoa
+    // Busca todos os lembretes de uma pessoa
     @GetMapping("/pessoa/{pessoaId}")
     public ResponseEntity<List<Lembrete>> buscarLembretesPorPessoa(@PathVariable Long pessoaId) {
         List<Lembrete> lembretes = lembreteService.buscarLembretesPorPessoa(pessoaId);
         return ResponseEntity.ok(lembretes);
+    }
+
+    // Atualiza um lembrete pelo ID
+    @PutMapping("/{id}")
+    public ResponseEntity<Lembrete> atualizarLembrete(@PathVariable Long id, @RequestBody Lembrete lembreteAtualizado) {
+        Lembrete atualizado = lembreteService.atualizarLembrete(id, lembreteAtualizado);
+        return ResponseEntity.ok(atualizado);
+    }
+
+    // Deleta um lembrete pelo ID
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deletarLembrete(@PathVariable Long id) {
+        if (lembreteService.deletarLembrete(id)) {
+            return ResponseEntity.noContent().build();
+        }
+        return ResponseEntity.notFound().build();
     }
 }

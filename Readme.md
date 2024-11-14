@@ -29,68 +29,41 @@ Essa API permite o gerenciamento de pessoas físicas e jurídicas (centros de re
 
 ### Endpoints
 
+### Materiais
+- **GET `/materiais/buscar`**: Busca materiais recicláveis contendo um texto específico.
+- **POST `/materiais/gravar-materiais`**: Carrega um arquivo JSON de materiais e salva no banco de dados.
+
 #### Cadastro de Pessoas Físicas
 
-- **Endpoint**: `/pessoas/cadastro`
-- **Método**: `POST`
-- **Descrição**: Cadastra uma nova pessoa física.
-- **Body**:
-  ```json
-  {
-    "nome": "string",
-    "email": "string",
-    "senha": "string",
-    "cep": "string",
-    "rua": "string",
-    "bairro": "string",
-    "cidade": "string",
-    "estado": "string"
-  }
+- **POST `/pessoas/cadastro`**: Cadastra uma nova pessoa física.
+- **PUT `/pessoas/{id}`**: Atualiza uma pessoa física existente pelo ID.
+- **DELETE `/pessoas/{id}`**: Deleta uma pessoa física pelo ID.
+
 
 ## Cadastro de Centros de Reciclagem
 
-**Endpoint:** `/pessoas-juridicas/cadastro`
-**Método:** POST
-**Descrição:** Cadastra uma nova pessoa jurídica (centro de reciclagem).
+- **POST `/pessoas-juridicas/cadastro`**: Cadastra uma nova pessoa jurídica.
+- **PUT `/pessoas-juridicas/{id}`**: Atualiza uma pessoa jurídica existente pelo ID.
+- **DELETE `/pessoas-juridicas/{id}`**: Deleta uma pessoa jurídica pelo ID.
 
-**Body (JSON):**
-```json
-{
-  "nome": "string",
-  "email": "string",
-  "senha": "string",
-  "cep": "string",
-  "rua": "string",
-  "bairro": "string",
-  "cidade": "string",
-  "estado": "string"
-}
-```
 ## Busca de Centros de Reciclagem por Cidade
 
 **Endpoint:** `/pessoas-juridicas/buscar/{nome_da_cidade}`
 **Método:** GET
 **Descrição:** Retorna todos os centros de reciclagem de uma cidade especificada.
 
-## Cadastro de Lembretes
+### Lembretes
+- **POST `/lembretes/cadastro/{pessoaId}`**: Cadastra um novo lembrete para uma pessoa (física ou jurídica).
+- **GET `/lembretes/pessoa/{pessoaId}`**: Busca todos os lembretes de uma pessoa pelo ID.
+- **PUT `/lembretes/{id}`**: Atualiza um lembrete existente pelo ID.
+- **DELETE `/lembretes/{id}`**: Deleta um lembrete pelo ID.
 
-**Endpoint:** `/lembretes/cadastro/{id_pessoa}`
-**Método:** POST
-**Descrição:** Cadastra um novo lembrete associado a uma pessoa.
-
-**Body (JSON):**
-```json
-{
-  "nome": "string",
-  "data": "yyyy-MM-dd",
-  "horario": "HH:mm:ss"
-}
-```
 ## Busca de Lembretes por Pessoa
 
 **Endpoint:** `/lembretes/buscar/{id_pessoa}`
 **Método:** GET
 **Descrição:** Retorna todos os lembretes cadastrados para uma pessoa especificada.
+
 
 ## Front-end
 

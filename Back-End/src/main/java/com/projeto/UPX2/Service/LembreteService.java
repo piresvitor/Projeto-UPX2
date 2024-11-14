@@ -32,4 +32,17 @@ public class LembreteService {
                 .orElseThrow(() -> new IllegalArgumentException("Pessoa não encontrada com ID: " + pessoaId));
         return lembreteRepository.findByPessoa(pessoa);
     }
+
+    public Lembrete atualizarLembrete(Long id, Lembrete lembreteAtualizado) {
+        lembreteAtualizado.setId(id);
+        return lembreteRepository.save(lembreteAtualizado);
+    }
+
+    public boolean deletarLembrete(Long id) {
+        if (lembreteRepository.existsById(id)) {
+            lembreteRepository.deleteById(id);
+            return true;
+        }
+        return false;
+    }
 }

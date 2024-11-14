@@ -1,183 +1,251 @@
-openapi: 3.0.0
+openapi: 3.0.1
 info:
   title: API de Gerenciamento de Pessoas e Centros de Reciclagem
   description: API para gerenciar pessoas físicas, centros de reciclagem e lembretes associados
   version: 1.0.0
 servers:
   - url: http://localhost:8080
+
 paths:
-  /pessoas/cadastro:
-    post:
-      summary: Cadastra uma nova pessoa física
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                nome:
-                  type: string
-                email:
-                  type: string
-                senha:
-                  type: string
-                cep:
-                  type: string
-                rua:
-                  type: string
-                bairro:
-                  type: string
-                cidade:
-                  type: string
-                estado:
-                  type: string
-              required:
-                - nome
-                - email
-                - senha
-                - cep
-                - rua
-                - bairro
-                - cidade
-                - estado
-      responses:
-        '201':
-          description: Pessoa cadastrada com sucesso
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Pessoa'
-        '400':
-          description: Parâmetros inválidos ou incompletos
 
-  /pessoas-juridicas/cadastro:
-    post:
-      summary: Cadastra uma nova pessoa jurídica (centro de reciclagem)
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                nome:
-                  type: string
-                email:
-                  type: string
-                senha:
-                  type: string
-                cep:
-                  type: string
-                rua:
-                  type: string
-                bairro:
-                  type: string
-                cidade:
-                  type: string
-                estado:
-                  type: string
-              required:
-                - nome
-                - email
-                - senha
-                - cep
-                - rua
-                - bairro
-                - cidade
-                - estado
-      responses:
-        '201':
-          description: Centro de reciclagem cadastrado com sucesso
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/PessoaJuridica'
-        '400':
-          description: Parâmetros inválidos ou incompletos
-
-  /pessoas-juridicas/buscar/{nome_da_cidade}:
+  /materiais/buscar:
     get:
-      summary: Busca centros de reciclagem por cidade
+      summary: Busca materiais recicláveis contendo um texto específico
       parameters:
-        - in: path
-          name: nome_da_cidade
+        - name: texto
+          in: query
+          required: true
           schema:
             type: string
-          required: true
-          description: Nome da cidade para a busca
       responses:
         '200':
-          description: Lista de centros de reciclagem encontrados
+          description: Lista de materiais recicláveis encontrados
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/PessoaJuridica'
-        '404':
-          description: Nenhum centro de reciclagem encontrado para a cidade especificada
-
-  /lembretes/cadastro/{id_pessoa}:
+                  $ref: '#/components/schemas/Materiais'
+        '204':
+          description: Nenhum material encontrado
+  /materiais/gravar-materiais:
     post:
-      summary: Cadastra um novo lembrete associado a uma pessoa
-      parameters:
-        - in: path
-          name: id_pessoa
-          schema:
-            type: integer
-          required: true
-          description: ID da pessoa associada ao lembrete
+      summary: Carrega um arquivo JSON de materiais e salva no banco de dados
       requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+                  description: Arquivo JSON contendo os dados dos materiais
+      responses:
+        '200':
+          description: Materiais salvos com sucesso no banco de dados
+        '500':
+          description: Erro ao processar o arquivo JSON
+  /pessoas/cadastro:
+    post:
+      summary: Cadastra uma nova pessoa física.
+      requestBody:
+        description: Dados da pessoa física a ser cadastrada.
         required: true
         content:
           application/json:
             schema:
-              type: object
-              properties:
-                nome:
-                  type: string
-                data:
-                  type: string
-                  format: date
-                horario:
-                  type: string
-                  format: time
-              required:
-                - nome
-                - data
-                - horario
+              $ref: '#/components/schemas/Pessoa'
       responses:
-        '201':
-          description: Lembrete cadastrado com sucesso
+        "201":
+          description: Pessoa cadastrada com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pessoa'
+  /pessoas/{id}:
+    put:
+      summary: Atualiza uma pessoa física existente.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: ID da pessoa a ser atualizada.
+      requestBody:
+        description: Dados atualizados da pessoa física.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Pessoa'
+      responses:
+        "200":
+          description: Pessoa atualizada com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Pessoa'
+        "404":
+          description: Pessoa não encontrada.
+    delete:
+      summary: Deleta uma pessoa física pelo ID.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: ID da pessoa a ser deletada.
+      responses:
+        "204":
+          description: Pessoa deletada com sucesso.
+        "404":
+          description: Pessoa não encontrada.
+
+  /pessoas-juridicas/cadastro:
+    post:
+      summary: Cadastra uma nova pessoa jurídica.
+      requestBody:
+        description: Dados da pessoa jurídica a ser cadastrada.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PessoaJuridica'
+      responses:
+        "201":
+          description: Pessoa jurídica cadastrada com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PessoaJuridica'
+  /pessoas-juridicas/{id}:
+    put:
+      summary: Atualiza uma pessoa jurídica existente.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: ID da pessoa jurídica a ser atualizada.
+      requestBody:
+        description: Dados atualizados da pessoa jurídica.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PessoaJuridica'
+      responses:
+        "200":
+          description: Pessoa jurídica atualizada com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PessoaJuridica'
+        "404":
+          description: Pessoa jurídica não encontrada.
+    delete:
+      summary: Deleta uma pessoa jurídica pelo ID.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: ID da pessoa jurídica a ser deletada.
+      responses:
+        "204":
+          description: Pessoa jurídica deletada com sucesso.
+        "404":
+          description: Pessoa jurídica não encontrada.
+
+  /lembretes/cadastro/{pessoaId}:
+    post:
+      summary: Cadastra um novo lembrete para uma pessoa.
+      parameters:
+        - in: path
+          name: pessoaId
+          required: true
+          schema:
+            type: integer
+          description: ID da pessoa associada ao lembrete.
+      requestBody:
+        description: Dados do lembrete a ser cadastrado.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Lembrete'
+      responses:
+        "201":
+          description: Lembrete cadastrado com sucesso.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Lembrete'
-        '404':
-          description: ID da pessoa não encontrado
-
-  /lembretes/buscar/{id_pessoa}:
+  /lembretes/pessoa/{pessoaId}:
     get:
-      summary: Retorna todos os lembretes cadastrados para uma pessoa
+      summary: Busca todos os lembretes de uma pessoa pelo ID.
       parameters:
         - in: path
-          name: id_pessoa
+          name: pessoaId
+          required: true
           schema:
             type: integer
-          required: true
-          description: ID da pessoa associada aos lembretes
+          description: ID da pessoa cujos lembretes serão buscados.
       responses:
-        '200':
-          description: Lista de lembretes da pessoa
+        "200":
+          description: Lista de lembretes da pessoa.
           content:
             application/json:
               schema:
                 type: array
                 items:
                   $ref: '#/components/schemas/Lembrete'
-        '404':
-          description: Nenhum lembrete encontrado para a pessoa especificada
+  /lembretes/{id}:
+    put:
+      summary: Atualiza um lembrete existente.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: ID do lembrete a ser atualizado.
+      requestBody:
+        description: Dados atualizados do lembrete.
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Lembrete'
+      responses:
+        "200":
+          description: Lembrete atualizado com sucesso.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Lembrete'
+        "404":
+          description: Lembrete não encontrado.
+    delete:
+      summary: Deleta um lembrete pelo ID.
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: integer
+          description: ID do lembrete a ser deletado.
+      responses:
+        "204":
+          description: Lembrete deletado com sucesso.
+        "404":
+          description: Lembrete não encontrado.
 
 components:
   schemas:
@@ -186,52 +254,90 @@ components:
       properties:
         id:
           type: integer
+          example: 1
         nome:
           type: string
+          example: "João Silva"
         email:
           type: string
+          example: "joao.silva@email.com"
+        senha:
+          type: string
+          example: "senha123"
         cep:
           type: string
+          example: "12345-678"
         rua:
           type: string
+          example: "Rua Exemplo"
         bairro:
           type: string
+          example: "Bairro Teste"
         cidade:
           type: string
+          example: "Cidade Exemplo"
         estado:
           type: string
+          example: "Estado Exemplo"
+
     PessoaJuridica:
       type: object
       properties:
         id:
           type: integer
+          example: 1
         nome:
           type: string
+          example: "Centro de Reciclagem ABC"
         email:
           type: string
+          example: "contato@reciclagemabc.com"
+        senha:
+          type: string
+          example: "senha123"
         cep:
           type: string
+          example: "98765-432"
         rua:
           type: string
+          example: "Rua das Flores"
         bairro:
           type: string
+          example: "Bairro Verde"
         cidade:
           type: string
+          example: "Cidade Verde"
         estado:
           type: string
+          example: "Estado Verde"
+
     Lembrete:
       type: object
       properties:
         id:
           type: integer
+          example: 1
         nome:
           type: string
+          example: "Lembrete para coleta seletiva"
         data:
           type: string
           format: date
+          example: "2024-12-01"
         horario:
           type: string
           format: time
-        pessoa:
-          $ref: '#/components/schemas/Pessoa'
+          example: "15:00:00"
 
+    Materiais:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 1
+        objeto:
+          type: string
+          example: "Garrafa de plástico"
+        descricao:
+          type: string
+          example: "Material reciclável feito de plástico PET"
