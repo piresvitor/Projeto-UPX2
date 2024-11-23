@@ -11,6 +11,7 @@ import java.util.List;
 @Repository
 public interface PessoaJuridicaRepository extends JpaRepository<PessoaJuridica, Long> {
 
+    // Busca por cidade (ignorar maiúsculas/minúsculas)
     @Query("SELECT p FROM PessoaJuridica p WHERE LOWER(p.cidade) = LOWER(:cidade)")
     List<PessoaJuridica> findByCidadeIgnoreCase(@Param("cidade") String cidade);
 }

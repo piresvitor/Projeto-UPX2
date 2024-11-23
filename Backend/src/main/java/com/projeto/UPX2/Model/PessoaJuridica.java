@@ -1,12 +1,11 @@
 package com.projeto.UPX2.Model;
 
 import jakarta.persistence.*;
-
 import java.util.List;
 
 @Entity
 @Table(name = "pessoa_juridica")
-public class PessoaJuridica{
+public class PessoaJuridica {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,7 +15,7 @@ public class PessoaJuridica{
     private String senha;
     private String cep;
     private String rua;
-    private String bairo;
+    private String bairro; //
     private String cidade;
     private String estado;
     @Column(nullable = false, unique = true)
@@ -28,22 +27,10 @@ public class PessoaJuridica{
     @Column
     private List<String> tiposMateriaisReciclados; // Por exemplo, "Vidro", "Plástico", "Papel"
 
+    // Construtor vazio
     public PessoaJuridica() {}
 
-    public PessoaJuridica(String nome, String email, String senha, Endereco endereco, String cnpj, String razaoSocial, List<String> tiposMateriaisReciclados) {
-        this.cnpj = cnpj;
-        this.razaoSocial = razaoSocial;
-        this.tiposMateriaisReciclados = tiposMateriaisReciclados;
-        this.nome = nome;
-        this.email = email;
-        this.senha = senha;
-        this.cep = endereco.cep();
-        this.rua = endereco.rua();
-        this.bairo = endereco.bairro();
-        this.cidade = endereco.cidade();
-        this.estado = endereco.estado();
-    }
-
+    // Getters e Setters
     public Long getId() {
         return id;
     }
@@ -92,12 +79,12 @@ public class PessoaJuridica{
         this.rua = rua;
     }
 
-    public String getBairo() {
-        return bairo;
+    public String getBairro() {
+        return bairro;
     }
 
-    public void setBairo(String bairo) {
-        this.bairo = bairo;
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
     }
 
     public String getCidade() {

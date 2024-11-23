@@ -26,7 +26,7 @@ public class PessoaService {
             pessoa.setSenha(pessoaAtualizada.getSenha());
             pessoa.setCep(pessoaAtualizada.getCep());
             pessoa.setRua(pessoaAtualizada.getRua());
-            pessoa.setBairo(pessoaAtualizada.getBairo());
+            pessoa.setBairro(pessoaAtualizada.getBairro());
             pessoa.setCidade(pessoaAtualizada.getCidade());
             pessoa.setEstado(pessoaAtualizada.getEstado());
             return pessoaRepository.save(pessoa);

@@ -3,7 +3,7 @@ const apiBaseURL = "http://localhost:8080";  // URL base da API
 // Função para buscar materiais com base no nome
 async function buscarMateriais() {
     const material = document.getElementById("material").value;
-    const url = `${apiBaseURL}/materiais/busca?nome=${encodeURIComponent(material)}`;
+    const url = `${apiBaseURL}/materiais/buscar?texto=${encodeURIComponent(material)}`;
 
     try {
         const response = await fetch(url);
@@ -113,26 +113,34 @@ async function cadastrarPessoa() {
     }
 }
 
-// Função para cadastrar pessoa jurídica (centro de reciclagem)
 async function cadastrarPessoaJuridica() {
+    // Captura os dados do formulário
+    const tiposMateriaisSelecionados = Array.from(document.querySelectorAll("input[name='tiposMateriaisReciclados']:checked"))
+        .map(checkbox => checkbox.value);
+
     const pessoaJuridicaData = {
         nome: document.getElementById("nome-juridico").value,
         email: document.getElementById("email-juridico").value,
         senha: document.getElementById("senha-juridico").value,
         cep: document.getElementById("cep-juridico").value,
         rua: document.getElementById("rua-juridico").value,
-        bairo: document.getElementById("bairro-juridico").value,
+        bairro: document.getElementById("bairro-juridico").value,
         cidade: document.getElementById("cidade-juridico").value,
-        estado: document.getElementById("estado-juridico").value
+        estado: document.getElementById("estado-juridico").value,
+        cnpj: document.getElementById("cnpj-juridico").value,
+        razaoSocial: document.getElementById("razao-social-juridico").value,
+        tiposMateriaisReciclados: tiposMateriaisSelecionados
     };
 
     try {
+        // Envia a solicitação para o backend
         const response = await fetch(`${apiBaseURL}/pessoas-juridicas/cadastro`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(pessoaJuridicaData)
         });
 
+        // Verifica a resposta do backend
         if (response.ok) {
             alert("Centro de Reciclagem cadastrado com sucesso!");
             document.getElementById("pessoa-juridica-form").reset();
@@ -141,6 +149,7 @@ async function cadastrarPessoaJuridica() {
         }
     } catch (error) {
         console.error("Erro:", error);
+        alert("Ocorreu um erro ao processar sua solicitação.");
     }
 }
 

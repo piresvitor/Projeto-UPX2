@@ -24,6 +24,7 @@ Essa API permite o gerenciamento de pessoas físicas e jurídicas (centros de re
 
 - **Back-end**: Java com Spring Boot e Spring Data JPA
 - **Banco de Dados**: PostgreSQL
+- **HTTP Methods**: Utilização dos métodos HTTP (GET, POST, PUT, DELETE) para manipulação dos dados.
 - **Documentação da API**: Swagger/OpenAPI 3.0
 - **Front-end**: HTML, CSS e JavaScript com Fetch API para consumo da API
 
@@ -153,5 +154,5 @@ Para dúvidas ou sugestões, entre em contato com o desenvolvedor.
 
 ## Melhorias futuras
 
-Melhoria na interface do frontend
-Criação de novas rotas 
+Melhoria na interface do frontend.
+Criação de novas para busca de centro comunitários 

@@ -5,6 +5,7 @@ import com.projeto.UPX2.Repository.PessoaJuridicaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -19,6 +20,10 @@ public class PessoaJuridicaService {
 
     public Optional<PessoaJuridica> buscarPorId(Long id) {
         return pessoaJuridicaRepository.findById(id);
+    }
+
+    public List<PessoaJuridica> buscarPorCidade(String cidade) {
+        return pessoaJuridicaRepository.findByCidadeIgnoreCase(cidade);
     }
 
     public PessoaJuridica atualizarPessoaJuridica(Long id, PessoaJuridica pessoaJuridicaAtualizada) {

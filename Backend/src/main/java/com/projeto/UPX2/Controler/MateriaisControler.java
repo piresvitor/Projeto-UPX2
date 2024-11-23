@@ -42,7 +42,7 @@ public class MateriaisControler {
             File tempFile = File.createTempFile("materiais", ".json");
             file.transferTo(tempFile);
 
-            // Chama o método do serviço para ler e salvar os materiais
+            // Chama o metodo do serviço para ler e salvar os materiais
             materiaisService.lerEGravarMateriais(tempFile.getAbsolutePath());
 
             // Deleta o arquivo temporário após o uso

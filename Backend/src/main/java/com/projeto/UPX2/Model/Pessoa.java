@@ -18,7 +18,7 @@ public class Pessoa {
     private String senha;
     private String cep;
     private String rua;
-    private String bairo;
+    private String bairro;
     private String cidade;
     private String estado;
 
@@ -34,7 +34,7 @@ public class Pessoa {
         this.senha = senha;
         this.cep = endereco.cep();
         this.rua = endereco.rua();
-        this.bairo = endereco.bairro();
+        this.bairro = endereco.bairro();
         this.cidade = endereco.cidade();
         this.estado = endereco.estado();
     }
@@ -79,12 +79,12 @@ public class Pessoa {
         this.cep = cep;
     }
 
-    public String getBairo() {
-        return bairo;
+    public String getBairro() {
+        return bairro;
     }
 
-    public void setBairo(String bairo) {
-        this.bairo = bairo;
+    public void setBairro(String bairro) {
+        this.bairro = bairro;
     }
 
     public String getRua() {
